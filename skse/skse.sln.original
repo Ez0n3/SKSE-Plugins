@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "skse", "skse\skse.vcproj", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "steam_loader", "steam_loader\steam_loader.vcproj", "{AE1AA342-F084-4F67-997D-2222369FBBE1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "plugin_example", "plugin_example\plugin_example.vcproj", "{547171CB-F934-40B9-B788-3C520FE66363}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "steam_boot", "steam_boot\steam_boot.vcproj", "{9659C409-A032-46AC-AF2C-2D5A27DC78EA}"
 EndProject
 Global
@@ -63,6 +65,10 @@ Global
 		{AE1AA342-F084-4F67-997D-2222369FBBE1}.Debug|Win32.Build.0 = Debug|Win32
 		{AE1AA342-F084-4F67-997D-2222369FBBE1}.Release|Win32.ActiveCfg = Release|Win32
 		{AE1AA342-F084-4F67-997D-2222369FBBE1}.Release|Win32.Build.0 = Release|Win32
+		{547171CB-F934-40B9-B788-3C520FE66363}.Debug|Win32.ActiveCfg = Debug|Win32
+		{547171CB-F934-40B9-B788-3C520FE66363}.Debug|Win32.Build.0 = Debug|Win32
+		{547171CB-F934-40B9-B788-3C520FE66363}.Release|Win32.ActiveCfg = Release|Win32
+		{547171CB-F934-40B9-B788-3C520FE66363}.Release|Win32.Build.0 = Release|Win32
 		{9659C409-A032-46AC-AF2C-2D5A27DC78EA}.Debug|Win32.ActiveCfg = Debug|Win32
 		{9659C409-A032-46AC-AF2C-2D5A27DC78EA}.Debug|Win32.Build.0 = Debug|Win32
 		{9659C409-A032-46AC-AF2C-2D5A27DC78EA}.Release|Win32.ActiveCfg = Release|Win32

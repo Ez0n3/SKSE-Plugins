@@ -1,4 +1,4 @@
-LIBRARY	"plugin_example"
+LIBRARY "ez_skse_plugin_example"
 EXPORTS
 SKSEPlugin_Query
 SKSEPlugin_Load

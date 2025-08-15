@@ -1,0 +1,220 @@
+
+
+
+
+
+
+
+========
+NEW USE 
+
+
+debug 
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;PLUGIN_EXAMPLE_EXPORTS;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+release 
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;PLUGIN_EXAMPLE_EXPORTS;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+
+
+;CS_VERSION=$(SeRuntimeVersionCS)
+
+
+
+========
+OLD PLUGIN BEFORE MOVED
+
+debug 
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;_USRDLL;SKSE_EXPORTS;SKSE_PLUGIN_EXAMPLE_EXPORTS;PLUGIN_EXAMPLE_EXPORTS;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);SKSE_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+release 
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;_USRDLL;SKSE_EXPORTS;SKSE_PLUGIN_EXAMPLE_EXPORTS;PLUGIN_EXAMPLE_EXPORTS;RUNTIME;RUNTIME_VERSION=$(SeRuntimeVersion);SKSE_CORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+
+
+========
+DEFUALT PLUGIN
+
+debug
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PLUGIN_EXAMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+release
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PLUGIN_EXAMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+	  
+	  
+	  
+========
+
+
+
+2>Generating Code...
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and 
+object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>main.obj : error LNK2019: unresolved external symbol "void __cdecl PackValue<bool>(class VMValue *,bool *,class VMClassRegistry *)" (??$PackValue@_N@@YAXPAVVMValue@@PA_NPAVVMClassRegistry@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+		
+2>main.obj : error LNK2019: unresolved external symbol "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z) 
+	referenced in function "void __cdecl UnpackValue<struct StaticFunctionTag>(struct StaticFunctionTag * *,class VMValue *)" (??$UnpackValue@UStaticFunctionTag@@@@YAXPAPAUStaticFunctionTag@@PAVVMValue@@@Z)
+	
+2>main.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl GetTypeID<bool>(class VMClassRegistry *)" (??$GetTypeID@_N@@YAKPAVVMClassRegistry@@@Z) 
+	referenced in function "public: void __thiscall NativeFunction0<struct StaticFunctionTag,bool>::InitParams(class VMClassRegistry *)" (?InitParams@?$NativeFunction0@UStaticFunctionTag@@_N@@QAEXPAVVMClassRegistry@@@Z)
+	
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+	
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 4 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+
+
+========
+GameReferences.cpp
+GameReferences.h
+
+
+
+2>Generating Code...
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>GameData.obj : error LNK2001: unresolved external symbol "bool (__cdecl* LookupREFRByHandle)(unsigned long *,class TESObjectREFR * *)" (?LookupREFRByHandle@@3Q6A_NPAKPAPAVTESObjectREFR@@@ZA)
+
+2>GameExtraData.obj : error LNK2001: unresolved external symbol "bool (__cdecl* LookupREFRByHandle)(unsigned long *,class TESObjectREFR * *)" (?LookupREFRByHandle@@3Q6A_NPAKPAPAVTESObjectREFR@@@ZA)
+
+2>GameData.obj : error LNK2001: unresolved external symbol "unsigned long const * const g_invalidRefHandle" (?g_invalidRefHandle@@3PBKB)
+
+2>GameExtraData.obj : error LNK2001: unresolved external symbol "unsigned long const * const g_invalidRefHandle" (?g_invalidRefHandle@@3PBKB)
+2>GameExtraData.obj : error LNK2019: unresolved external symbol "public: unsigned long __thiscall TESContainer::CountItem(class TESForm *)const " (?CountItem@TESContainer@@QBEKPAVTESForm@@@Z) referenced in function "public: class InventoryEntryData * __thiscall ExtraContainerChanges::Data::CreateEquipEntryData(class TESForm *)" (?CreateEquipEntryData@Data@ExtraContainerChanges@@QAEPAVInventoryEntryData@@PAVTESForm@@@Z)
+2>GameExtraData.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl HashUtil::CRC32(char const *,unsigned long)" (?CRC32@HashUtil@@YAKPBDK@Z) referenced in function "public: void __thiscall ExtraContainerChanges::Data::GetEquipItemData(struct InventoryEntryData::EquipData &,class TESForm *,long)const " (?GetEquipItemData@Data@ExtraContainerChanges@@QBEXAAUEquipData@InventoryEntryData@@PAVTESForm@@J@Z)
+
+2>main.obj : error LNK2019: unresolved external symbol "void __cdecl PackValue<bool>(class VMValue *,bool *,class VMClassRegistry *)" (??$PackValue@_N@@YAXPAVVMValue@@PA_NPAVVMClassRegistry@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z) referenced in function "void __cdecl UnpackValue<struct StaticFunctionTag>(struct StaticFunctionTag * *,class VMValue *)" (??$UnpackValue@UStaticFunctionTag@@@@YAXPAPAUStaticFunctionTag@@PAVVMValue@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl GetTypeID<bool>(class VMClassRegistry *)" (??$GetTypeID@_N@@YAKPAVVMClassRegistry@@@Z) referenced in function "public: void __thiscall NativeFunction0<struct StaticFunctionTag,bool>::InitParams(class VMClassRegistry *)" (?InitParams@?$NativeFunction0@UStaticFunctionTag@@_N@@QAEXPAVVMClassRegistry@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 8 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+
+========
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\GameFormComponents.cpp (2 hits)
+	Line  50: 	bool Accept(TESContainer::Entry * entry)
+	Line  60: UInt32 TESContainer::CountItem(TESForm * item) const
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\GameFormComponents.h (1 hit)
+  
+  
+
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>GameExtraData.obj : error LNK2019: unresolved external symbol "public: unsigned long __thiscall TESContainer::CountItem(class TESForm *)const " (?CountItem@TESContainer@@QBEKPAVTESForm@@@Z) 
+	referenced in function "public: class InventoryEntryData * __thiscall ExtraContainerChanges::Data::CreateEquipEntryData(class TESForm *)" (?CreateEquipEntryData@Data@ExtraContainerChanges@@QAEPAVInventoryEntryData@@PAVTESForm@@@Z)
+2>GameExtraData.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl HashUtil::CRC32(char const *,unsigned long)" (?CRC32@HashUtil@@YAKPBDK@Z) 
+	referenced in function "public: void __thiscall ExtraContainerChanges::Data::GetEquipItemData(struct InventoryEntryData::EquipData &,class TESForm *,long)const " (?GetEquipItemData@Data@ExtraContainerChanges@@QBEXAAUEquipData@InventoryEntryData@@PAVTESForm@@J@Z)
+
+2>main.obj : error LNK2019: unresolved external symbol "void __cdecl PackValue<bool>(class VMValue *,bool *,class VMClassRegistry *)" (??$PackValue@_N@@YAXPAVVMValue@@PA_NPAVVMClassRegistry@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z) 
+	referenced in function "void __cdecl UnpackValue<struct StaticFunctionTag>(struct StaticFunctionTag * *,class VMValue *)" (??$UnpackValue@UStaticFunctionTag@@@@YAXPAPAUStaticFunctionTag@@PAVVMValue@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl GetTypeID<bool>(class VMClassRegistry *)" (??$GetTypeID@_N@@YAKPAVVMClassRegistry@@@Z) 
+	referenced in function "public: void __thiscall NativeFunction0<struct StaticFunctionTag,bool>::InitParams(class VMClassRegistry *)" (?InitParams@?$NativeFunction0@UStaticFunctionTag@@_N@@QAEXPAVVMClassRegistry@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 6 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 8:58 PM and took 12.832 seconds ==========
+
+
+
+========
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\HashUtil.cpp (2 hits)
+	Line  1: #include "HashUtil.h"
+	Line 39: namespace HashUtil
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\HashUtil.h (1 hit)
+	Line 3: namespace HashUtil
+  
+	
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>GameExtraData.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl HashUtil::CRC32(char const *,unsigned long)" (?CRC32@HashUtil@@YAKPBDK@Z) 
+	referenced in function "public: void __thiscall ExtraContainerChanges::Data::GetEquipItemData(struct InventoryEntryData::EquipData &,class TESForm *,long)const " (?GetEquipItemData@Data@ExtraContainerChanges@@QBEXAAUEquipData@InventoryEntryData@@PAVTESForm@@J@Z)
+2>main.obj : error LNK2019: unresolved external symbol "void __cdecl PackValue<bool>(class VMValue *,bool *,class VMClassRegistry *)" (??$PackValue@_N@@YAXPAVVMValue@@PA_NPAVVMClassRegistry@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z) 
+	referenced in function "void __cdecl UnpackValue<struct StaticFunctionTag>(struct StaticFunctionTag * *,class VMValue *)" (??$UnpackValue@UStaticFunctionTag@@@@YAXPAPAUStaticFunctionTag@@PAVVMValue@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl GetTypeID<bool>(class VMClassRegistry *)" (??$GetTypeID@_N@@YAKPAVVMClassRegistry@@@Z) 
+	referenced in function "public: void __thiscall NativeFunction0<struct StaticFunctionTag,bool>::InitParams(class VMClassRegistry *)" (?InitParams@?$NativeFunction0@UStaticFunctionTag@@_N@@QAEXPAVVMClassRegistry@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 5 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+
+========
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\PapyrusArgs.cpp (16 hits)
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\PapyrusArgs.h (25 hits)
+
+2>Generating Code...
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+2>main.obj : error LNK2019: unresolved external symbol "void __cdecl PackValue<bool>(class VMValue *,bool *,class VMClassRegistry *)" (??$PackValue@_N@@YAXPAVVMValue@@PA_NPAVVMClassRegistry@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z) referenced in function "void __cdecl UnpackValue<struct StaticFunctionTag>(struct StaticFunctionTag * *,class VMValue *)" (??$UnpackValue@UStaticFunctionTag@@@@YAXPAPAUStaticFunctionTag@@PAVVMValue@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "unsigned long __cdecl GetTypeID<bool>(class VMClassRegistry *)" (??$GetTypeID@_N@@YAKPAVVMClassRegistry@@@Z) referenced in function "public: void __thiscall NativeFunction0<struct StaticFunctionTag,bool>::InitParams(class VMClassRegistry *)" (?InitParams@?$NativeFunction0@UStaticFunctionTag@@_N@@QAEXPAVVMClassRegistry@@@Z)
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 4 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+
+========
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\PapyrusVM.cpp (1 hit)
+	Line   7: void VMClassInfo::AddRef(void)
+
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: void __thiscall VMClassInfo::AddRef(void)" (?AddRef@VMClassInfo@@QAEXXZ) referenced in function "void __cdecl BindID(class VMIdentifier * *,void *,class VMClassRegistry *,class IObjectHandlePolicy *,unsigned long)" (?BindID@@YAXPAPAVVMIdentifier@@PAXPAVVMClassRegistry@@PAVIObjectHandlePolicy@@K@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: void __thiscall VMClassInfo::Release(void)" (?Release@VMClassInfo@@QAEXXZ) referenced in function "void __cdecl BindID(class VMIdentifier * *,void *,class VMClassRegistry *,class IObjectHandlePolicy *,unsigned long)" (?BindID@@YAXPAPAVVMIdentifier@@PAXPAVVMClassRegistry@@PAVIObjectHandlePolicy@@K@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: unsigned __int64 __thiscall VMIdentifier::GetHandle(void)" (?GetHandle@VMIdentifier@@QAE_KXZ) referenced in function "void * __cdecl UnpackHandle(class VMValue *,unsigned long)" (?UnpackHandle@@YAPAXPAVVMValue@@K@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: void __thiscall VMIdentifier::IncrementLock(void)" (?IncrementLock@VMIdentifier@@QAEXXZ) referenced in function "public: void __thiscall VMValue::SetIdentifier(class VMIdentifier * *)" (?SetIdentifier@VMValue@@QAEXPAPAVVMIdentifier@@@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: long __thiscall VMIdentifier::DecrementLock(void)" (?DecrementLock@VMIdentifier@@QAEJXZ) referenced in function "void __cdecl PackHandle(class VMValue *,void *,unsigned long,class VMClassRegistry *)" (?PackHandle@@YAXPAVVMValue@@PAXKPAVVMClassRegistry@@@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: void __thiscall VMIdentifier::Destroy(void)" (?Destroy@VMIdentifier@@QAEXXZ) referenced in function "void __cdecl PackHandle(class VMValue *,void *,unsigned long,class VMClassRegistry *)" (?PackHandle@@YAXPAVVMValue@@PAXKPAVVMClassRegistry@@@Z)
+2>PapyrusArgs.obj : error LNK2019: unresolved external symbol "public: unsigned long __thiscall VMValue::GetUnmangledType(void)" (?GetUnmangledType@VMValue@@QAEKXZ) referenced in function "public: bool __thiscall VMValue::IsIdentifier(void)" (?IsIdentifier@VMValue@@QAE_NXZ)
+2>PapyrusArgs.obj : error LNK2001: unresolved external symbol "class IObjectHandlePolicy * * g_objectHandlePolicy" (?g_objectHandlePolicy@@3PAPAVIObjectHandlePolicy@@A)
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 9 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+
+
+========
+Search "NativeFunction::DebugRunHook" (8 hits in 2 files of 525 searched) [Normal]
+  O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse\skse\PapyrusNativeFunctions.cpp (1 hit)
+	Line 3: void NativeFunction::DebugRunHook(VMValue * baseValue, VMClassRegistry * registry, UInt32 arg2, VMValue * resultValue, VMState * state)
+
+2>Generating Code...
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) 
+	referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 1 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+
+
+========
+
+2>GameAPI.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+2>   Creating library O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.lib and object O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.exp
+2>main.obj : error LNK2019: unresolved external symbol "public: void __thiscall NativeFunction::DebugRunHook(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?DebugRunHook@NativeFunction@@QAEXPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z) referenced in function "public: virtual bool __thiscall NativeFunction0<struct StaticFunctionTag,bool>::Run(class VMValue *,class VMClassRegistry *,unsigned long,class VMValue *,class VMState *)" (?Run@?$NativeFunction0@UStaticFunctionTag@@_N@@UAE_NPAVVMValue@@PAVVMClassRegistry@@K0PAVVMState@@@Z)
+2>O:\Projects\Games\ScriptExtender_Basic\SKSE-Plugins\skse_plugins\ez_skse_plugin_example\Builds\Debug\ez_skse_plugin_example.dll : fatal error LNK1120: 1 unresolved externals
+2>Done building project "ez_skse_plugin_example.vcxproj" -- FAILED.
+========== Build: 1 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========

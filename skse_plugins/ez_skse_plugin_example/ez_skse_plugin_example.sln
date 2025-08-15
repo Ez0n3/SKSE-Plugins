@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common_vc9", "..\..\common\common_vc9.vcxproj", "{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "skse", "..\..\skse\skse\skse.vcxproj", "{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "skse-core", "skse-core", "{824C29F0-071C-4FE2-806A-2D6925F353C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ez_skse_plugin_example", "ez_skse_plugin_example.vcxproj", "{9F973981-4200-4D50-A8B3-0A35CC9CBAB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}.Debug|x86.ActiveCfg = Debug|Win32
+		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}.Debug|x86.Build.0 = Debug|Win32
+		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}.Release|x86.ActiveCfg = Release|Win32
+		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6}.Release|x86.Build.0 = Release|Win32
+		{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2}.Debug|x86.Build.0 = Debug|Win32
+		{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2}.Release|x86.ActiveCfg = Release|Win32
+		{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2}.Release|x86.Build.0 = Release|Win32
+		{9F973981-4200-4D50-A8B3-0A35CC9CBAB1}.Debug|x86.ActiveCfg = Debug|Win32
+		{9F973981-4200-4D50-A8B3-0A35CC9CBAB1}.Debug|x86.Build.0 = Debug|Win32
+		{9F973981-4200-4D50-A8B3-0A35CC9CBAB1}.Release|x86.ActiveCfg = Release|Win32
+		{9F973981-4200-4D50-A8B3-0A35CC9CBAB1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20C6411C-596F-4B85-BE4E-8BC91F59D8A6} = {824C29F0-071C-4FE2-806A-2D6925F353C1}
+		{AA0365EC-47EA-45AA-BB1F-EBBCCCC466F2} = {824C29F0-071C-4FE2-806A-2D6925F353C1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28E27464-35AC-4181-BE81-83D3AFEBCFDB}
+	EndGlobalSection
+EndGlobal
